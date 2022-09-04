@@ -747,6 +747,10 @@
   \vspace{-4.0mm}
 }
 
+% Define a line of cv information (references without data)
+% Usage: \cvref{<name>}{<position>}{<location>}{<date>}
+\newcommand{\cvref}[3]{\cvhonor{\hspace{-4.9em} #1}{#2}{#3}{}}
+
 
 %-------------------------------------------------------------------------------
 %                Commands for elements of Cover Letter
