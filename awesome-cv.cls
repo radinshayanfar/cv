@@ -88,6 +88,8 @@
   pdfsubject={},
   pdfkeywords={}
 }
+% Needed for indenting whole paragraph
+\RequirePackage{changepage}
 
 
 %-------------------------------------------------------------------------------
