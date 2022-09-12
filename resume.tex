@@ -63,7 +63,7 @@
 \homepage{radin-shayanfar.ir}
 \github{radinshayanfar}
 %\linkedin{posquit0}
-\gitlab{radinshayanfar}
+%\gitlab{radinshayanfar}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
 % \skype{skype-id}
@@ -75,7 +75,12 @@
 % \googlescholar{googlescholar-id}{}
 % \extrainfo{extra information}
 
+% Quote is used here as interests
+\renewcommand{\acvHeaderAfterSocialSkip}{6mm}
+\renewcommand{\acvHeaderAfterQuoteSkip}{-2mm}
+\renewcommand*{\headerquotestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{darktext} #1}}
 %\quote{``Be the change that you want to see in the world."}
+\quote{\textbf{Research Interests:}\\ Deep Generative Models, Machine Learning for Computer Vision \& Speech Recognition, \\ Applications of AI in Information Security, IoT \& Software Engineering}
 
 
 %-------------------------------------------------------------------------------
@@ -106,10 +111,10 @@
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{resume/education.tex}
-\input{resume/certificates.tex}
-\input{resume/projects.tex}
-\input{resume/skills.tex}
 \input{resume/experience.tex}
+\input{resume/projects.tex}
+\input{resume/certificates.tex}
+\input{resume/skills.tex}
 \input{cv/honors.tex}
 \input{cv/languages.tex}
 \input{resume/references.tex}
