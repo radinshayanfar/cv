@@ -751,6 +751,9 @@
 % Usage: \cvref{<name>}{<position>}{<location>}{<date>}
 \newcommand{\cvref}[3]{\cvhonor{\hspace{-4.9em} #1}{#2}{#3}{}}
 
+\newcommand*{\cvpub}[3]{%
+  \honordatestyle{#3} & \honortitlestyle{#1} & \honorlocationstyle{#2} \\
+}
 
 %-------------------------------------------------------------------------------
 %                Commands for elements of Cover Letter
