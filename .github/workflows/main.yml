@@ -12,6 +12,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
+          docker_image: ghcr.io/xu-cheng/texlive-full:20240315
           root_file: |
             cv.tex
             resume.tex
