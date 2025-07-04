@@ -1,8 +1,10 @@
 name: Build LaTeX document
 on:
   push:
-    tags:
-      - "*"
+    branches:
+      - 'master'
+    # tags:
+      # - "*"
 jobs:
   build_latex:
     runs-on: ubuntu-latest
