@@ -1,0 +1,64 @@
+%% style.sty — shared style for cv.tex, resume.tex, coverletter.tex
+%% Goals: lightweight, ATS-parseable, clean typography, no graphics/icons.
+\ProvidesPackage{style}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{etoolbox}
+
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{subtle}{HTML}{555555}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfborder={0 0 0}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+
+%% Sections
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}{}{0pt}{}[{\color{accent}\titlerule[0.6pt]}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries\itshape}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+%% Lists
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=2pt, parsep=0pt, label=\textbullet}
+
+%% Entry: \entry{Title}{Subtitle}{Location}{Date}
+\newcommand{\entry}[4]{%
+  \par\vspace{3pt}%
+  \noindent\textbf{#1}\hfill\textcolor{subtle}{#4}\par%
+  \ifstrempty{#2}{}{\noindent\textit{#2}}%
+  \ifstrempty{#3}{}{\hfill\textcolor{subtle}{#3}}\par%
+}
+
+%% Header for CV / résumé
+\newcommand{\header}[1]{%
+  \begin{center}
+    {\LARGE\bfseries Radin Shayanfar}\par
+    \ifstrempty{#1}{}{\vspace{2pt}{\normalsize\color{subtle} #1}\par}
+    \vspace{4pt}
+    \small
+    Kingston, ON, Canada \quad\textbar\quad
+    \href{mailto:radin.shayanfar@gmail.com}{radin.shayanfar@gmail.com}\par
+    \href{https://github.com/radinshayanfar}{github.com/radinshayanfar} \quad\textbar\quad
+    \href{https://linkedin.com/in/radin-shayanfar}{linkedin.com/in/radin-shayanfar} \quad\textbar\quad
+    \href{https://scholar.google.com/citations?user=bvRKN-0AAAAJ}{Google Scholar}
+  \end{center}
+  \vspace{-4pt}
+}
