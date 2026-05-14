@@ -12,20 +12,31 @@
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{etoolbox}
+\usepackage{fancyhdr}
 
 \definecolor{accent}{HTML}{1F4E79}
 \definecolor{subtle}{HTML}{555555}
+\definecolor{link}{HTML}{2B6CB0}
 
 \hypersetup{
   colorlinks=true,
-  urlcolor=accent,
-  linkcolor=accent,
+  urlcolor=link,
+  linkcolor=link,
   pdfborder={0 0 0}
 }
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2pt}
+
+%% Page style with auto-updated date in the footer. Enable with \datefooter.
+\fancypagestyle{datefooter}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \fancyfoot[R]{\textcolor{subtle}{\footnotesize Last updated: \today}}%
+}
+\newcommand{\datefooter}{\pagestyle{datefooter}\thispagestyle{datefooter}}
 
 %% Sections
 \titleformat{\section}
@@ -39,7 +50,7 @@
 %% Lists
 \setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=2pt, parsep=0pt, label=\textbullet}
 
-%% Entry: \entry{Title}{Subtitle}{Location}{Date}
+%% Entry: \entry{Title}{Subtitle}{RightBottom}{RightTop}
 \newcommand{\entry}[4]{%
   \par\vspace{3pt}%
   \noindent\textbf{#1}\hfill\textcolor{subtle}{#4}\par%
@@ -47,18 +58,43 @@
   \ifstrempty{#3}{}{\hfill\textcolor{subtle}{#3}}\par%
 }
 
-%% Header for CV / résumé
+%% Publication: \pubentry{Title}{Authors}{Venue}
+%% Left column holds title + authors (wraps as needed); right column holds the venue,
+%% kept narrow so the title can never collide with it.
+\newcommand{\pubentry}[3]{%
+  \par\vspace{4pt}%
+  \noindent
+  \begin{minipage}[t]{0.78\linewidth}\raggedright
+    \textbf{#1}\par
+    #2
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.20\linewidth}\raggedleft
+    \textcolor{subtle}{#3}
+  \end{minipage}%
+  \par
+}
+
+%% Reference: \reference[link-label]{Name}{Position}{Institution}{email}{profile-url-or-empty}
+\newcommand{\reference}[6][Google Scholar]{%
+  \par\vspace{4pt}%
+  \noindent\textbf{#2}\,---\,\textit{#3}\hfill\textcolor{subtle}{#4}\par%
+  \noindent\hspace*{1em}\href{mailto:#5}{#5}%
+  \ifstrempty{#6}{}{\,\textcolor{subtle}{\textbullet}\,\href{#6}{#1}}\par%
+}
+
+%% Header for CV / résumé / cover letter
+%% Unified contact links: Email · GitHub · LinkedIn · Google Scholar (all hyperlinked, subtle color)
 \newcommand{\header}[1]{%
   \begin{center}
-    {\LARGE\bfseries Radin Shayanfar}\par
+    {\Huge\bfseries Radin Shayanfar}\par
     \ifstrempty{#1}{}{\vspace{2pt}{\normalsize\color{subtle} #1}\par}
-    \vspace{4pt}
-    \small
-    Kingston, ON, Canada \quad\textbar\quad
-    \href{mailto:radin.shayanfar@gmail.com}{radin.shayanfar@gmail.com}\par
-    \href{https://github.com/radinshayanfar}{github.com/radinshayanfar} \quad\textbar\quad
-    \href{https://linkedin.com/in/radin-shayanfar}{linkedin.com/in/radin-shayanfar} \quad\textbar\quad
-    \href{https://scholar.google.com/citations?user=bvRKN-0AAAAJ}{Google Scholar}
+    \vspace{5pt}
+    {\small
+    Kingston, ON, Canada\,\textcolor{subtle}{\textbullet}\,%
+    \href{mailto:radin.shayanfar@gmail.com}{radin.shayanfar@gmail.com}\,\textcolor{subtle}{\textbullet}\,%
+    \href{https://github.com/radinshayanfar}{GitHub}\,\textcolor{subtle}{\textbullet}\,%
+    \href{https://linkedin.com/in/radin-shayanfar}{LinkedIn}\,\textcolor{subtle}{\textbullet}\,%
+    \href{https://scholar.google.com/citations?user=bvRKN-0AAAAJ}{Google Scholar}}
   \end{center}
   \vspace{-4pt}
 }
