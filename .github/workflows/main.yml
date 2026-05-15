@@ -16,7 +16,6 @@ jobs:
           root_file: |
             cv.tex
             resume.tex
-          latexmk_use_xelatex: true
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
