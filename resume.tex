@@ -7,7 +7,7 @@
 \header{}
 
 \section*{Summary}
-Computer engineer and LLM researcher at Huawei Canada's Research Centre, focused on coding agents --- building scaffolds, designing evaluations, and developing benchmarks in one of the fastest-moving areas of applied AI. Broader work bridges NLP research with practical engineering to make LLM-driven systems more capable, controllable, and reliable.
+Computer engineer and LLM researcher at Huawei Canada, focused on coding agents --- building scaffolds, evaluations, and benchmarks in one of the fastest-moving areas of applied AI. Broader work bridges NLP research with practical engineering to make LLM-driven systems more capable, controllable, and reliable.
 
 \section*{Education}
 
@@ -39,19 +39,6 @@ Computer engineer and LLM researcher at Huawei Canada's Research Centre, focused
   \item Designed and developed a web API using a microservices architecture with Flask and Laravel, streamlining voice-command processing and authentication.
 \end{itemize}
 
-\section*{Open-Source Contributions}
-
-\entry{\href{https://github.com/harbor-framework/harbor}{Harbor Framework}}{Agent-evaluation harness from the creators of Terminal-Bench}{Contributor}{2026}
-\begin{itemize}
-  \item Authored the \textbf{FeatBench} adapter (\href{https://github.com/harbor-framework/harbor/pull/1218}{\#1218}) for a 156-task, 25-repo code-generation benchmark; \textbf{achieved full oracle parity with the upstream benchmark} by patching defects in the original Docker images and benchmark code and validating across independent runs.
-  \item Integrated ByteDance's \textbf{trae-agent} (\href{https://github.com/harbor-framework/harbor/pull/1298}{\#1298}); reviewed the SWE-Gym pytest-xdist fix (\href{https://github.com/harbor-framework/harbor/pull/1438}{\#1438}), flagging a regression that led to a scoped, environment-aware solution.
-\end{itemize}
-
-\entry{\href{https://github.com/NVIDIA-NeMo/Guardrails}{NVIDIA NeMo Guardrails}}{LLM programmable-guardrails toolkit}{Contributor}{2024}
-\begin{itemize}
-  \item Fixed Colang~2 parser and prompt-rendering bugs (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/833}{\#833}, \href{https://github.com/NVIDIA-NeMo/Guardrails/pull/765}{\#765}, \href{https://github.com/NVIDIA-NeMo/Guardrails/pull/748}{\#748}); added Colang commenting support to the VSCode extension (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/749}{\#749}).
-\end{itemize}
-
 \section*{Publications}
 
 \pubentry
@@ -73,6 +60,22 @@ Computer engineer and LLM researcher at Huawei Canada's Research Centre, focused
   {\href{https://aclanthology.org/2024.findings-emnlp.924/}{Misinformation with Legal Consequences (MisLC): A New Task Towards Harnessing Societal Harm of Misinformation}}
   {Chu Fei Luo, \textbf{Radin Shayanfar}, Rohan V.\ Bhambhoria, Samuel Dahan, Xiaodan Zhu.}
   {EMNLP 2024\\(Findings)}
+
+\section*{Open-Source Contributions}
+
+\entry{\href{https://github.com/harbor-framework/harbor}{Harbor Framework}}{Agent-evaluation harness and RL-environment framework from the creators of Terminal-Bench}{Contributor}{2026}
+\begin{itemize}
+  \item Authored the \textbf{FeatBench} adapter (\href{https://github.com/harbor-framework/harbor/pull/1218}{PR \#1218}) for a 156-task, 25-repo feature-level code-generation benchmark. \textbf{Achieved parity with the upstream benchmark} by diagnosing and patching multiple defects in the original Docker images and benchmark code.
+  \item Integrated ByteDance's \textbf{trae-agent} into Harbor (\href{https://github.com/harbor-framework/harbor/pull/1298}{PR \#1298}): full agent implementation, configuration handling, API-key sanitization, and unit tests.
+  \item Fixed a deveval oracle env-var bug (\href{https://github.com/harbor-framework/harbor/pull/1431}{PR \#1431}); reviewed the SWE-Gym pytest-xdist fix (\href{https://github.com/harbor-framework/harbor/pull/1438}{PR \#1438}), flagging that the proposed universal flag would break environments without the dependency installed.
+\end{itemize}
+
+\entry{\href{https://github.com/NVIDIA-NeMo/Guardrails}{NVIDIA NeMo Guardrails}}{Toolkit for programmable guardrails on LLM-based conversational systems}{Contributor}{2024}
+\begin{itemize}
+  \item Fixed the Colang~2 parser to correctly handle nested \texttt{if/else} statements (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/833}{PR \#833}).
+  \item Resolved multiline output rendering in few-shot prompts (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/765}{PR \#765}) and dynamic flow generation (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/748}{PR \#748}).
+  \item Added Colang commenting support (\texttt{Ctrl+/}) to the VSCode extension (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/749}{PR \#749}).
+\end{itemize}
 
 \section*{Selected Projects}
 
