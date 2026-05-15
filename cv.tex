@@ -40,6 +40,11 @@ Large Language Models, LLM Coding Agents, LLM Evaluation \& Safety, Conversation
 \section*{Publications}
 
 \pubentry
+  {\href{https://centre-for-software-excellence.github.io/docs/blog/before-you-score-the-model-score-the-benchmark}{Before You Score the Model, Score the Benchmark: A Skeptical View Into Current Agentic Software Engineering Benchmarks}}
+  {\textbf{Radin Shayanfar}, Keheliya Gallaba.}
+  {Blog Post \,\textbullet\, May 2026}
+
+\pubentry
   {\href{https://arxiv.org/abs/2506.02264}{CoDial: Interpretable Task-Oriented Dialogue Systems Through Dialogue Flow Alignment}}
   {\textbf{Radin Shayanfar}, Chu Fei Luo, Rohan V.\ Bhambhoria, Samuel Dahan, Xiaodan Zhu.}
   {ACL 2026}
@@ -89,6 +94,23 @@ Large Language Models, LLM Coding Agents, LLM Evaluation \& Safety, Conversation
 \begin{itemize}
   \item \textbf{Queen's University} --- Teaching Assistant: Machine Learning \& Deep Learning (Winter 2025, Prof.\ X.\ Zhu); Fundamentals of Information Structure (Fall 2024, Prof.\ T.\ Dean); Object-Oriented Programming (Winter 2024, Prof.\ M.\ Greenspan).
   \item \textbf{Amirkabir University of Technology} --- Teaching Assistant: Multicore Programming (Spring 2022 \& 2023, Prof.\ M.\ Momtazpour); Computational Intelligence (Spring 2022, Prof.\ M.\ Ebadzadeh); Signals and Systems (\textbf{Head TA}, Fall 2021, Prof.\ M.\ Rasti; Spring 2021, Dr.\ A.\ Aghaeeyan); Data Structures and Algorithms (Fall 2021, Prof.\ E.\ Nazerfard); Linear Algebra (Spring 2021, Prof.\ M.\ H.\ Chehreghani).
+\end{itemize}
+
+\section*{Open-Source Contributions}
+
+\entry{\href{https://github.com/harbor-framework/harbor}{Harbor Framework}}{Agent-evaluation harness and RL-environment framework from the creators of Terminal-Bench}{Contributor}{2026}
+\begin{itemize}
+  \item Authored the \textbf{FeatBench} adapter (\href{https://github.com/harbor-framework/harbor/pull/1218}{PR \#1218}) for a 156-task, 25-repo feature-level code-generation benchmark. \textbf{Achieved parity with the upstream benchmark} by diagnosing and patching multiple defects in the original Docker images and benchmark code.
+  \item Integrated ByteDance's \textbf{trae-agent} into Harbor (\href{https://github.com/harbor-framework/harbor/pull/1298}{PR \#1298}): full agent implementation, configuration handling, API-key sanitization, and unit tests.
+  \item Fixed an environment-variable bug in deveval oracle script generation (\href{https://github.com/harbor-framework/harbor/pull/1431}{PR \#1431}).
+  \item Reviewed the SWE-Gym adapter fix for pytest-xdist compatibility (\href{https://github.com/harbor-framework/harbor/pull/1438}{PR \#1438}); flagged that the proposed universal flag would break environments without pytest-xdist installed.
+\end{itemize}
+
+\entry{\href{https://github.com/NVIDIA-NeMo/Guardrails}{NVIDIA NeMo Guardrails}}{Toolkit for programmable guardrails on LLM-based conversational systems}{Contributor}{2024}
+\begin{itemize}
+  \item Fixed the Colang~2 parser to correctly handle nested \texttt{if/else} statements (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/833}{PR \#833}).
+  \item Resolved multiline output rendering in few-shot prompts (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/765}{PR \#765}) and dynamic flow generation (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/748}{PR \#748}).
+  \item Added Colang commenting support (\texttt{Ctrl+/}) to the VSCode extension (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/749}{PR \#749}).
 \end{itemize}
 
 \section*{Projects}

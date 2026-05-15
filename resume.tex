@@ -21,8 +21,7 @@
 \entry{Associate LLM Engineer}{\href{https://www.huawei.com/}{Huawei Canada}}{Kingston, ON, Canada}{Sep.\ 2025 -- Present}
 \begin{itemize}
   \item Design and analyze coding-agent scaffolds for real software-engineering tasks at Huawei Canada's Research Centre.
-  \item Build benchmarks and evaluation pipelines to surface insights into agent behavior and capabilities.
-  \item Contributor to the \href{https://github.com/harbor-framework/harbor}{Harbor Framework} (official harness for Terminal-Bench 2.0); merged Trae-agent and authored an adapter for a feature-implementation benchmark.
+  \item Build benchmarks and evaluation pipelines to surface insights into agent behavior and capabilities (see open-source contributions below).
 \end{itemize}
 
 \entry{Big Data Engineer}{\href{https://bale.ai/}{Bale Messenger}}{Tehran, Iran}{Mar.\ 2023 -- Aug.\ 2023}
@@ -35,6 +34,19 @@
 \begin{itemize}
   \item Trained a speaker-verification system (part of an Intelligent Voice Commands product) using the state-of-the-art \href{https://arxiv.org/abs/2104.01466}{ECAPA-TDNN} model, reaching over 97\% accuracy on a custom 8,400-pair dataset.
   \item Designed and built a microservices web API in Flask and Laravel for voice-command processing and authentication.
+\end{itemize}
+
+\section*{Open-Source Contributions}
+
+\entry{\href{https://github.com/harbor-framework/harbor}{Harbor Framework}}{Agent-evaluation harness from the creators of Terminal-Bench}{Contributor}{2026}
+\begin{itemize}
+  \item Authored the \textbf{FeatBench} adapter (\href{https://github.com/harbor-framework/harbor/pull/1218}{\#1218}) for a 156-task, 25-repo code-generation benchmark; \textbf{achieved full oracle parity with the upstream benchmark} by patching defects in the original Docker images and benchmark code and validating across independent runs.
+  \item Integrated ByteDance's \textbf{trae-agent} (\href{https://github.com/harbor-framework/harbor/pull/1298}{\#1298}); reviewed the SWE-Gym pytest-xdist fix (\href{https://github.com/harbor-framework/harbor/pull/1438}{\#1438}), flagging a regression that led to a scoped, environment-aware solution.
+\end{itemize}
+
+\entry{\href{https://github.com/NVIDIA-NeMo/Guardrails}{NVIDIA NeMo Guardrails}}{LLM programmable-guardrails toolkit}{Contributor}{2024}
+\begin{itemize}
+  \item Fixed Colang~2 parser and prompt-rendering bugs (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/833}{\#833}, \href{https://github.com/NVIDIA-NeMo/Guardrails/pull/765}{\#765}, \href{https://github.com/NVIDIA-NeMo/Guardrails/pull/748}{\#748}); added Colang commenting support to the VSCode extension (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/749}{\#749}).
 \end{itemize}
 
 \section*{Publications}
@@ -53,6 +65,11 @@
   {\href{https://aclanthology.org/2024.findings-emnlp.924/}{Misinformation with Legal Consequences (MisLC): A New Task Towards Harnessing Societal Harm of Misinformation}}
   {Chu Fei Luo, \textbf{Radin Shayanfar}, Rohan V.\ Bhambhoria, Samuel Dahan, Xiaodan Zhu.}
   {Findings of EMNLP 2024}
+
+\pubentry
+  {\href{https://centre-for-software-excellence.github.io/docs/blog/before-you-score-the-model-score-the-benchmark}{Before You Score the Model, Score the Benchmark: A Skeptical View Into Current Agentic Software Engineering Benchmarks}}
+  {\textbf{Radin Shayanfar}, Keheliya Gallaba.}
+  {Blog Post \,\textbullet\, May 2026}
 
 \section*{Selected Projects}
 
@@ -75,22 +92,17 @@
 
 \section*{Skills}
 \begin{itemize}
-  \item \textbf{Languages:} Python, PHP, Go, Java, C, JavaScript, HTML, CSS, LaTeX.
+  \item \textbf{Programming:} Python, PHP, Go, Java, C, JavaScript, HTML, CSS, LaTeX.
   \item \textbf{LLMs \& Agents:} LLM Coding Agents, Agent Evaluation \& Benchmarking, Harbor Framework, LangChain, NeMo Guardrails, RAG, Pinecone.
   \item \textbf{ML \& NLP:} PyTorch, HuggingFace Transformers, SpeechBrain, Keras.
   \item \textbf{Web \& Backend:} Laravel, Flask, REST APIs, MySQL, Redis, React.
   \item \textbf{Big Data \& DevOps:} Apache Spark, Hive, Kafka, Docker, Kubernetes, Git, Linux.
+  \item \textbf{Languages:} Persian (native); English (proficient; TOEFL 109/120).
 \end{itemize}
 
 \section*{Certificates}
 \begin{itemize}
-  \item AWS Technical Essentials --- Amazon Web Services, 2025.
-  \item \href{https://www.coursera.org/account/accomplishments/specialization/certificate/WT5VCNDDCB7V}{Generative Adversarial Networks Specialization} --- DeepLearning.AI, 2022.
-  \item \href{https://www.coursera.org/account/accomplishments/specialization/certificate/3DWHZC46YSCK}{Deep Learning Specialization} --- DeepLearning.AI, 2020.
-  \item \href{https://www.coursera.org/account/accomplishments/certificate/2XNJSGPREAQY}{Machine Learning} --- Stanford University, 2020.
+  \item AWS Technical Essentials (Amazon, 2025); \href{https://www.coursera.org/account/accomplishments/specialization/certificate/WT5VCNDDCB7V}{GAN Specialization} (DeepLearning.AI, 2022); \href{https://www.coursera.org/account/accomplishments/specialization/certificate/3DWHZC46YSCK}{Deep Learning Specialization} (DeepLearning.AI, 2020); \href{https://www.coursera.org/account/accomplishments/certificate/2XNJSGPREAQY}{Machine Learning} (Stanford, 2020).
 \end{itemize}
-
-\section*{Languages}
-Persian (native); English (proficient; TOEFL 109/120).
 
 \end{document}
