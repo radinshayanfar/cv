@@ -7,33 +7,15 @@
 \header{}
 
 \section*{Summary}
-Computer engineer and LLM researcher at Huawei Canada's Research Centre, focused on coding agents --- building scaffolds, designing evaluations, and developing benchmarks in one of the fastest-moving areas of applied AI. Broader work bridges NLP research with practical engineering to make LLM-driven systems more capable, controllable, and reliable.
-
-\section*{Education}
-
-\entry{Master of Applied Science, Electrical and Computer Engineering}{Queen's University, Kingston, ON, Canada}{GPA: A+}{Sep.\ 2023 -- Sep.\ 2025}
-\begin{itemize}
-  \item Thesis: \textit{CoDial: Interpretable Task-Oriented Dialogue Systems Through Dialogue Flow Alignment}.
-  \item Supervisor: Prof.\ X.\ Zhu.
-  \item Research areas: NLP, dialogue systems, NLP in the legal domain, machine learning.
-\end{itemize}
-
-\entry{Bachelor of Science, Computer Engineering}{Amirkabir University of Technology, Tehran, Iran}{GPA: 19.45 / 20}{Sep.\ 2018 -- Apr.\ 2023}
-\begin{itemize}
-  \item Ranked \textbf{1st} among 156 students.
-  \item B.Sc.\ Project: \textit{Generating Handwritten Persian Characters with Generative Models}.
-  \item Supervisor: Prof.\ A.\ Nickabadi.
-  \item Selected coursework: Computational Intelligence (20/20), Artificial Intelligence (20/20), Data Structures and Algorithms (20/20), Information Retrieval (20/20), Programming Languages (20/20), Signals and Systems (20/20), Advanced Programming (20/20), Web Programming (20/20), Multicore Programming (19.8/20), Multimedia Systems (19.5/20), Data Mining (19.5/20), Operating Systems (19.4/20).
-\end{itemize}
-
-\entry{High School Diploma, Mathematics and Physics}{Allame Helli 3 High School (NODET), Tehran, Iran}{Average: 19.16 / 20}{2014 -- 2018}
+LLM engineer and researcher at Huawei Canada specializing in coding agents and agent evaluation. ACL 2026 and ICML 2026 publications on interpretable dialogue and multi-agent LLM safety; contributor to Harbor (Terminal-Bench's official harness) and NVIDIA's NeMo Guardrails. Build LLM-driven systems that are capable, controllable, and reliable.
 
 \section*{Experience}
 
 \entry{Associate LLM Engineer}{\href{https://www.huawei.com/}{Huawei Canada}}{Kingston, ON, Canada}{Sep.\ 2025 -- Present}
 \begin{itemize}
-  \item Design and analyze coding-agent scaffolds for real software-engineering tasks.
-  \item Build benchmarks and evaluation pipelines to surface meaningful insights into agent behaviour and capabilities.
+  \item Improved a coding-agent scaffold, boosting performance by \textbf{>15\%} on SWE-Bench Verified.
+  \item Analyzed agent outputs on LiveCodeBench (LCB); identified model-side anomalies and harness/evaluation defects that masked true capability signal.
+  \item Lifted gold-patch resolution on FeatBench from \textbf{37.31\%}\,{\small$\pm$\,1.88} to \textbf{99.81\%}\,{\small$\pm$\,0.10} by diagnosing harness and environment defects in the original benchmark; released FeatBench-Verified v1.3 to the community.
 \end{itemize}
 
 \entry{Big Data Engineer}{\href{https://bale.ai/}{Bale Messenger}}{Tehran, Iran}{Mar.\ 2023 -- Aug.\ 2023}
@@ -64,12 +46,24 @@ Computer engineer and LLM researcher at Huawei Canada's Research Centre, focused
   \item \textbf{Amirkabir University of Technology} --- Teaching Assistant: Multicore Programming (Spring 2022 \& 2023, Prof.\ M.\ Momtazpour); Computational Intelligence (Spring 2022, Prof.\ M.\ Ebadzadeh); Signals and Systems (\textbf{Head TA}, Fall 2021, Prof.\ M.\ Rasti; Spring 2021, Dr.\ A.\ Aghaeeyan); Data Structures and Algorithms (Fall 2021, Prof.\ E.\ Nazerfard); Linear Algebra (Spring 2021, Prof.\ M.\ H.\ Chehreghani).
 \end{itemize}
 
-\section*{Publications}
+\section*{Education}
 
-\pubentry
-  {\href{https://centre-for-software-excellence.github.io/docs/blog/before-you-score-the-model-score-the-benchmark}{Before You Score the Model, Score the Benchmark: A Skeptical View Into Current Agentic Software Engineering Benchmarks}}
-  {\textbf{Radin Shayanfar}, Keheliya Gallaba.}
-  {Blog Post\\May 2026}
+\entry{Master of Applied Science, Electrical and Computer Engineering}{Queen's University, Kingston, ON, Canada}{GPA: A+}{Sep.\ 2023 -- Sep.\ 2025}
+\begin{itemize}
+  \item Thesis: \textit{CoDial: Interpretable Task-Oriented Dialogue Systems Through Dialogue Flow Alignment} (Prof.\ X.\ Zhu). Published at ACL 2026.
+  \item Research areas: NLP, dialogue systems, NLP in the legal domain, machine learning.
+\end{itemize}
+
+\entry{Bachelor of Science, Computer Engineering}{Amirkabir University of Technology, Tehran, Iran}{GPA: 19.45 / 20}{Sep.\ 2018 -- Apr.\ 2023}
+\begin{itemize}
+  \item Ranked \textbf{1st} among 156 students.
+  \item B.Sc.\ Project: \textit{Generating Handwritten Persian Characters with Generative Models} (Prof.\ A.\ Nickabadi).
+  \item Selected coursework: Computational Intelligence (20/20), Artificial Intelligence (20/20), Data Structures and Algorithms (20/20), Information Retrieval (20/20), Programming Languages (20/20), Signals and Systems (20/20), Advanced Programming (20/20), Web Programming (20/20), Multicore Programming (19.8/20), Multimedia Systems (19.5/20), Data Mining (19.5/20), Operating Systems (19.4/20).
+\end{itemize}
+
+\entry{High School Diploma, Mathematics and Physics}{Allame Helli 3 High School (NODET), Tehran, Iran}{Average: 19.16 / 20}{2014 -- 2018}
+
+\section*{Publications}
 
 \pubentry
   {\href{https://arxiv.org/abs/2506.02264}{CoDial: Interpretable Task-Oriented Dialogue Systems Through Dialogue Flow Alignment}}
@@ -82,25 +76,20 @@ Computer engineer and LLM researcher at Huawei Canada's Research Centre, focused
   {ICML 2026}
 
 \pubentry
+  {\href{https://centre-for-software-excellence.github.io/docs/blog/before-you-score-the-model-score-the-benchmark}{Before You Score the Model, Score the Benchmark: A Skeptical View Into Current Agentic Software Engineering Benchmarks}}
+  {\textbf{Radin Shayanfar}, Keheliya Gallaba.}
+  {Blog Post\\May 2026}
+
+\pubentry
   {\href{https://aclanthology.org/2024.findings-emnlp.924/}{Misinformation with Legal Consequences (MisLC): A New Task Towards Harnessing Societal Harm of Misinformation}}
   {Chu Fei Luo, \textbf{Radin Shayanfar}, Rohan V.\ Bhambhoria, Samuel Dahan, Xiaodan Zhu.}
   {EMNLP 2024\\(Findings)}
-
-\section*{Skills}
-\begin{itemize}
-  \item \textbf{Languages:} Python, PHP, Go, Java, C, JavaScript, HTML, CSS, LaTeX, LISP, ML.
-  \item \textbf{LLMs \& Agents:} LLM Coding Agents, Agent Evaluation \& Benchmarking, Harbor Framework, LangChain, NeMo Guardrails, RAG, Pinecone, Pyserini.
-  \item \textbf{Machine Learning \& NLP:} PyTorch, HuggingFace Transformers, Keras, SpeechBrain.
-  \item \textbf{Web \& Backend:} Laravel, Flask, REST APIs, MySQL, Redis, React, Sass.
-  \item \textbf{Big Data:} Apache Spark, Apache Hive, Apache Hadoop, Apache Kafka.
-  \item \textbf{DevOps \& Tools:} Docker, Kubernetes, Git, Linux, server administration, CUDA, OpenMP, OpenCV, Arduino.
-\end{itemize}
 
 \section*{Open-Source Contributions}
 
 \entry{\href{https://github.com/harbor-framework/harbor}{Harbor Framework}}{Agent-evaluation harness and RL-environment framework from the creators of Terminal-Bench}{Contributor}{2026}
 \begin{itemize}
-  \item Authored the \textbf{FeatBench} adapter (\href{https://github.com/harbor-framework/harbor/pull/1218}{PR \#1218}) for a 156-task, 25-repo feature-level code-generation benchmark. \textbf{Achieved parity with the upstream benchmark} by diagnosing and patching multiple defects in the original Docker images and benchmark code.
+  \item Authored the \textbf{FeatBench} Harbor adapter (\href{https://github.com/harbor-framework/harbor/pull/1218}{PR \#1218}) for a 156-task, 25-repo feature-level code-generation benchmark; ported parity fixes upstream to FeatBench and released FeatBench-Verified v1.3, preserving 99\%+ of original instances and tests.
   \item Integrated ByteDance's \textbf{trae-agent} into Harbor (\href{https://github.com/harbor-framework/harbor/pull/1298}{PR \#1298}): full agent implementation, configuration handling, API-key sanitization, and unit tests.
   \item Fixed an environment-variable bug in deveval oracle script generation (\href{https://github.com/harbor-framework/harbor/pull/1431}{PR \#1431}).
   \item Reviewed the SWE-Gym adapter fix for pytest-xdist compatibility (\href{https://github.com/harbor-framework/harbor/pull/1438}{PR \#1438}); flagged that the proposed universal flag would break environments without pytest-xdist installed.
@@ -189,6 +178,15 @@ Computer engineer and LLM researcher at Huawei Canada's Research Centre, focused
 \entry{Ping-Pong Ball Tracker}{C++, OpenCV}{}{2014}
 \begin{itemize}
   \item Developed a real-time ping-pong ball tracking system using OpenCV and C++.
+\end{itemize}
+
+\section*{Skills}
+\begin{itemize}
+  \item \textbf{Programming:} Python, Go, Java, C, JavaScript, LaTeX, LISP, ML.
+  \item \textbf{LLMs \& Agents:} LLM Coding Agents, Agent Evaluation \& Benchmarking, Harbor Framework, LangChain, NeMo Guardrails, RAG, Pinecone, Pyserini.
+  \item \textbf{Machine Learning \& NLP:} PyTorch, HuggingFace Transformers, Keras, SpeechBrain.
+  \item \textbf{Big Data \& Infra:} Apache Spark, Apache Hive, Apache Hadoop, Apache Kafka, Docker, Kubernetes, Linux, Git, server administration.
+  \item \textbf{Other:} CUDA, OpenMP, OpenCV, Arduino.
 \end{itemize}
 
 \section*{Certificates}

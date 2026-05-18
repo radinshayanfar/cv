@@ -7,24 +7,15 @@
 \header{}
 
 \section*{Summary}
-Computer engineer and LLM researcher at Huawei Canada, focused on coding agents --- building scaffolds, evaluations, and benchmarks in one of the fastest-moving areas of applied AI. Broader work bridges NLP research with practical engineering to make LLM-driven systems more capable, controllable, and reliable.
-
-\section*{Education}
-
-\entry{M.A.Sc., Electrical and Computer Engineering}{Queen's University, Kingston, ON, Canada}{GPA: A+}{Sep.\ 2023 -- Sep.\ 2025}
-\begin{itemize}
-  \item Thesis: \textit{CoDial: Interpretable Task-Oriented Dialogue Systems Through Dialogue Flow Alignment}.
-  \item Supervisor: Prof.\ X.\ Zhu.
-\end{itemize}
-
-\entry{B.Sc., Computer Engineering}{Amirkabir University of Technology, Tehran, Iran}{GPA: 19.45 / 20 --- Ranked 1st of 156}{Sep.\ 2018 -- Apr.\ 2023}
+LLM engineer and researcher at Huawei Canada specializing in coding agents and agent evaluation. ACL 2026 and ICML 2026 publications on interpretable dialogue and multi-agent LLM safety; contributor to Harbor (Terminal-Bench's official harness) and NVIDIA's NeMo Guardrails. Build LLM-driven systems that are capable, controllable, and reliable.
 
 \section*{Experience}
 
 \entry{Associate LLM Engineer}{\href{https://www.huawei.com/}{Huawei Canada}}{Kingston, ON, Canada}{Sep.\ 2025 -- Present}
 \begin{itemize}
-  \item Design and analyze coding-agent scaffolds for real software-engineering tasks.
-  \item Build benchmarks and evaluation pipelines to surface meaningful insights into agent behaviour and capabilities.
+  \item Improved a coding-agent scaffold, boosting performance by \textbf{>15\%} on SWE-Bench Verified.
+  \item Analyzed agent outputs on LiveCodeBench; surfaced model-side anomalies and harness/eval defects.
+  \item Lifted gold-patch resolution on FeatBench from \textbf{37.31\%}\,{\footnotesize$\pm$\,1.88} to \textbf{99.81\%}\,{\footnotesize$\pm$\,0.10} by diagnosing harness and environment defects in the original benchmark; released FeatBench-Verified v1.3 to the community.
 \end{itemize}
 
 \entry{Big Data Engineer}{\href{https://bale.ai/}{Bale Messenger}}{Tehran, Iran}{Mar.\ 2023 -- Aug.\ 2023}
@@ -36,15 +27,21 @@ Computer engineer and LLM researcher at Huawei Canada, focused on coding agents 
 \entry{Machine Learning Engineer \& Backend Developer}{Sharif Data Analytics Lab \& National Elites Foundation of Iran}{Tehran, Iran}{Dec.\ 2021 -- Sep.\ 2022}
 \begin{itemize}
   \item Trained a speaker-verification system (part of an Intelligent Voice Commands product) leveraging the state-of-the-art \href{https://arxiv.org/abs/2104.01466}{ECAPA-TDNN} model, achieving over 97\% accuracy on a custom 8,400-pair dataset.
-  \item Designed and developed a web API using a microservices architecture with Flask and Laravel, streamlining voice-command processing and authentication.
+\end{itemize}
+
+\section*{Education}
+
+\entry{M.A.Sc., Electrical and Computer Engineering}{Queen's University, Kingston, ON, Canada}{GPA: A+}{Sep.\ 2023 -- Sep.\ 2025}
+\begin{itemize}
+  \item Thesis: \textit{CoDial: Interpretable Task-Oriented Dialogue Systems Through Dialogue Flow Alignment} (Prof.\ X.\ Zhu). Published at ACL 2026.
+\end{itemize}
+
+\entry{B.Sc., Computer Engineering}{Amirkabir University of Technology, Tehran, Iran}{GPA: 19.45 / 20 --- Ranked 1st of 156}{Sep.\ 2018 -- Apr.\ 2023}
+\begin{itemize}
+  \item B.Sc.\ Project: \textit{Generating Handwritten Persian Characters with Generative Models} (Prof.\ A.\ Nickabadi).
 \end{itemize}
 
 \section*{Publications}
-
-\pubentry
-  {\href{https://centre-for-software-excellence.github.io/docs/blog/before-you-score-the-model-score-the-benchmark}{Before You Score the Model, Score the Benchmark: A Skeptical View Into Current Agentic Software Engineering Benchmarks}}
-  {\textbf{Radin Shayanfar}, Keheliya Gallaba.}
-  {Blog Post\\May 2026}
 
 \pubentry
   {\href{https://arxiv.org/abs/2506.02264}{CoDial: Interpretable Task-Oriented Dialogue Systems Through Dialogue Flow Alignment}}
@@ -57,6 +54,11 @@ Computer engineer and LLM researcher at Huawei Canada, focused on coding agents 
   {ICML 2026}
 
 \pubentry
+  {\href{https://centre-for-software-excellence.github.io/docs/blog/before-you-score-the-model-score-the-benchmark}{Before You Score the Model, Score the Benchmark: A Skeptical View Into Current Agentic Software Engineering Benchmarks}}
+  {\textbf{Radin Shayanfar}, Keheliya Gallaba.}
+  {Blog Post\\May 2026}
+
+\pubentry
   {\href{https://aclanthology.org/2024.findings-emnlp.924/}{Misinformation with Legal Consequences (MisLC): A New Task Towards Harnessing Societal Harm of Misinformation}}
   {Chu Fei Luo, \textbf{Radin Shayanfar}, Rohan V.\ Bhambhoria, Samuel Dahan, Xiaodan Zhu.}
   {EMNLP 2024\\(Findings)}
@@ -65,9 +67,9 @@ Computer engineer and LLM researcher at Huawei Canada, focused on coding agents 
 
 \entry{\href{https://github.com/harbor-framework/harbor}{Harbor Framework}}{Agent-evaluation harness and RL-environment framework from the creators of Terminal-Bench}{Contributor}{2026}
 \begin{itemize}
-  \item Authored the \textbf{FeatBench} adapter (\href{https://github.com/harbor-framework/harbor/pull/1218}{PR \#1218}) for a 156-task, 25-repo feature-level code-generation benchmark. \textbf{Achieved parity with the upstream benchmark} by diagnosing and patching multiple defects in the original Docker images and benchmark code.
+  \item Authored the \textbf{FeatBench} Harbor adapter (\href{https://github.com/harbor-framework/harbor/pull/1218}{PR \#1218}) for a 156-task, 25-repo feature-level code-generation benchmark; ported parity fixes upstream to FeatBench and released FeatBench-Verified v1.3, preserving 99\%+ of original instances and tests.
   \item Integrated ByteDance's \textbf{trae-agent} into Harbor (\href{https://github.com/harbor-framework/harbor/pull/1298}{PR \#1298}): full agent implementation, configuration handling, API-key sanitization, and unit tests.
-  \item Fixed a deveval oracle env-var bug (\href{https://github.com/harbor-framework/harbor/pull/1431}{PR \#1431}); reviewed the SWE-Gym pytest-xdist fix (\href{https://github.com/harbor-framework/harbor/pull/1438}{PR \#1438}), flagging that the proposed universal flag would break environments without the dependency installed.
+  \item Fixed a deveval oracle env-var bug (\href{https://github.com/harbor-framework/harbor/pull/1431}{PR \#1431}); reviewed the SWE-Gym pytest-xdist fix (\href{https://github.com/harbor-framework/harbor/pull/1438}{PR \#1438}).
 \end{itemize}
 
 \entry{\href{https://github.com/NVIDIA-NeMo/Guardrails}{NVIDIA NeMo Guardrails}}{Toolkit for programmable guardrails on LLM-based conversational systems}{Contributor}{2024}
@@ -85,17 +87,18 @@ Computer engineer and LLM researcher at Huawei Canada, focused on coding agents 
   \item Built a complete WMT translation system: data loading, BPE tokenization, masking, training loop, and evaluation.
 \end{itemize}
 
-\entry{Generative Models for Handwritten Persian Characters}{Python, Keras, PyTorch}{}{Feb.\ 2022 -- Apr.\ 2023}
+\entry{\href{https://github.com/radinshayanfar/speechbrain}{Speaker-Specific Voice Activity Detection}}{PyTorch, SpeechBrain, VAD, Speaker Verification}{}{Fall 2024}
 \begin{itemize}
-  \item Studied GAN, DCGAN, WGAN-GP, VAE, Real NVP, and DDPM; trained a Real NVP and developed a novel technique to replicate personal handwriting styles. B.Sc.\ project under Prof.\ A.\ Nickabadi.
+  \item Proposed a Speaker-Specific VAD framework integrating ECAPA-TDNN embeddings into a CRDNN-based VAD; extended SpeechBrain to support conditioning on target-speaker embeddings.
+  \item Achieved low Diarization Error Rate on the AMI dataset under real-time, multi-speaker conditions.
 \end{itemize}
 
 \section*{Skills}
 \begin{itemize}
-  \item \textbf{Programming:} Python, PHP, Go, Java, C, JavaScript, HTML, CSS, LaTeX.
+  \item \textbf{Programming:} Python, Go, Java, C, JavaScript.
   \item \textbf{LLMs \& Agents:} LLM Coding Agents, Agent Evaluation \& Benchmarking, Harbor Framework, LangChain, NeMo Guardrails, RAG, Pinecone.
   \item \textbf{ML \& NLP:} PyTorch, HuggingFace Transformers, SpeechBrain, Keras.
-  \item \textbf{Web \& Backend:} Laravel, Flask, REST APIs, MySQL, Redis, React.
+  \item \textbf{Infra \& Tools:} Docker, Kubernetes, Linux, Git, Apache Spark, Kafka.
   \item \textbf{Languages:} Persian (native); English (proficient; TOEFL 109/120).
 \end{itemize}
 
