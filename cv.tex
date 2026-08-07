@@ -8,14 +8,14 @@
 \header{LLM Coding Agents \textbullet\ Agent Evaluation \& Benchmarking}
 
 \section*{Summary}
-LLM engineer and researcher at Huawei Canada. I build agentic SE benchmarks, audit existing ones for validity and reliability, and improve agent scaffolds, with first-author papers at AAAI 2027 (under review) and ACL 2026. I also contribute to Harbor, the harness behind Terminal-Bench, and NVIDIA NeMo Guardrails. Previously, during my M.A.Sc., I worked on controlling LLM behaviour rather than measuring it, compiling dialogue schemas into executable guardrails (CoDial, ACL 2026) and red-teaming models through multi-agent debate (RedDebate, ICML 2026).
+AI/ML engineer and researcher at Huawei Canada working on \textbf{LLM coding agents} and their evaluation. I build, audit, and improve the \textbf{benchmarks} and \textbf{harnesses}, and work to make agents' output \textbf{trustworthy}, with papers under review at \textbf{AAAI} 2027 and \textbf{NeurIPS} 2026. During my M.A.Sc.\ I worked on controlling LLM behaviour, compiling dialogue schemas into \textbf{interpretable guardrails} (CoDial, \textbf{ACL} 2026), making models safer via \textbf{multi-agent debate} (RedDebate, \textbf{ICML} 2026), and applying \textbf{RAG} to \textbf{high-stakes} misinformation detection (MisLC, \textbf{EMNLP} 2024). I also contribute to Harbor, the harness behind Terminal-Bench, and NVIDIA NeMo Guardrails.
 
 \section*{Experience}
 
 \entry{Associate LLM Engineer}{\href{https://www.huawei.com/}{Huawei Canada}}{Kingston, ON, Canada}{Sep.\ 2025 -- Present}
 \begin{itemize}
-  \item Lifted gold-patch resolution on FeatBench from \textbf{37.31\%}\,{\small$\pm$\,1.88} to \textbf{99.81\%}\,{\small$\pm$\,0.10} by diagnosing harness, container, and dependency-pinning defects in the original benchmark, and released the fixes as FeatBench-Verified v1.3.
-  \item Raised an in-house model's resolve rate on SWE-Bench Verified by \textbf{15+ points} by auditing agent trajectories on an OpenHands scaffold and fixing the recurring failure modes they exposed, including a hardened string-replacement tool worth $\sim$10 points of that gain, plus evaluation-infrastructure defects.
+  \item Lifted gold-patch resolution on FeatBench from 37.31\%\,{\small$\pm$\,1.88} to \textbf{99.81\%}\,{\small$\pm$\,0.10} by diagnosing harness, container, and dependency-pinning defects in the original benchmark, and released the fixes as FeatBench-Verified v1.3.
+  \item Raised an in-house model's resolve rate on SWE-Bench Verified by \textbf{15+ points} by auditing agent trajectories and modifying the OpenHands scaffold to mitigate the recurring failure modes they exposed, including a hardened string-replacement tool worth $\sim$10 points of that gain, plus evaluation-infrastructure defects.
   \item Designed and built a \textbf{375-task} multi-language agentic coding benchmark in the SWE-Bench family, spanning bug fixes, feature implementation, documentation, refactoring, and testing. Problem statements are drawn from real developer--agent interactions rather than GitHub issue text, closing the gap between how benchmarks phrase tasks and how developers actually ask for them (paper in preparation).
   \item Shipped each task at three levels of problem detail, varying how much the developer reveals to the agent, so the benchmark measures sensitivity to problem specification rather than a single fixed phrasing.
   \item Profiled what five agentic SE benchmarks demand of an agent by running six coding agents across two model families at three scales each; introduced the Spread--Novelty--Centrality profile, showed that category labels such as ``bug fix'' are unreliable proxies for the engineering work a task requires, and surfaced behavioural patterns specific to each family and scale (first-author, AAAI 2027, under review).
@@ -24,7 +24,7 @@ LLM engineer and researcher at Huawei Canada. I build agentic SE benchmarks, aud
 
 \entry{Big Data Engineer}{\href{https://bale.ai/}{Bale Messenger}}{Tehran, Iran}{Mar.\ 2023 -- Aug.\ 2023}
 \begin{itemize}
-  \item Developed and maintained production big data pipelines for continuous ingestion and processing on the Bale financial-messaging platform, serving \textbf{$\sim$20M monthly active users}.
+  \item Developed and maintained production big data pipelines for continuous ingestion and processing on the Bale financial-messaging platform, serving $\sim$20M monthly active users.
   \item Implemented scalable solutions with Apache Spark, Hive, and Kafka, improving the efficiency and scalability of the data warehouse and the real-time accessibility of its data.
 \end{itemize}
 
@@ -197,7 +197,7 @@ LLM engineer and researcher at Huawei Canada. I build agentic SE benchmarks, aud
 \section*{Skills}
 \begin{itemize}
   \item \textbf{Programming:} Python, Go, Java, C, JavaScript, LaTeX, LISP, ML.
-  \item \textbf{LLMs \& Agents:} LLM Coding Agents, Agent Scaffolds, Agent Evaluation \& Benchmarking, Benchmark Construction \& Auditing, Agent Trajectory Analysis, Sandboxed Execution, OpenHands, Harbor, Terminal-Bench, SWE-Bench, LangChain, NeMo Guardrails, RAG, Pinecone, Pyserini.
+  \item \textbf{LLMs \& Agents:} coding agents, agent scaffolds, agent evaluation and benchmarking, benchmark construction, trajectory analysis, sandboxed execution, tool use, MCP, SWE-Bench, OpenHands, Harbor, Terminal-Bench, vLLM, LangChain, LiteLLM, NeMo Guardrails, RAG, Pyserini, BM25, Pinecone.
   \item \textbf{Machine Learning \& NLP:} PyTorch, HuggingFace Transformers, Keras, SpeechBrain.
   \item \textbf{Big Data \& Infra:} Apache Spark, Apache Hive, Apache Hadoop, Apache Kafka, Docker, Kubernetes, Linux, Git, server administration.
   \item \textbf{Other:} CUDA, OpenMP, OpenCV, Arduino.
