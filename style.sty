@@ -22,12 +22,15 @@
   colorlinks=true,
   urlcolor=link,
   linkcolor=link,
-  pdfborder={0 0 0}
+  pdfborder={0 0 0},
+  pdfauthor={Radin Shayanfar},
+  pdfsubject={LLM coding agents, agent evaluation and benchmarking},
+  pdfkeywords={LLM, coding agents, agent evaluation, benchmarking, Harbor, Terminal-Bench, SWE-Bench, Python, PyTorch}
 }
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{2pt}
+\setlength{\parskip}{1pt}
 
 %% Page style with auto-updated date in the footer. Enable with \datefooter.
 \fancypagestyle{datefooter}{%
@@ -58,18 +61,20 @@
   \ifstrempty{#3}{}{\hfill\textcolor{subtle}{#3}}\par%
 }
 
-%% Publication: \pubentry{Title}{Authors}{Venue}
+%% Publication: \pubentry[Description]{Title}{Authors}{Venue}
 %% Left column holds title + authors (wraps as needed); right column holds the venue,
-%% kept narrow so the title can never collide with it.
-\newcommand{\pubentry}[3]{%
-  \par\vspace{4pt}%
+%% kept narrow so the title can never collide with it. The optional first argument adds
+%% a one-line gloss below the authors, for entries worth describing.
+\newcommand{\pubentry}[4][]{%
+  \par\vspace{6pt}%
   \noindent
   \begin{minipage}[t]{0.78\linewidth}\raggedright
-    \textbf{#1}\par\vspace{3pt}
-    #2
+    \textbf{#2}\par\vspace{1pt}
+    #3%
+    \ifstrempty{#1}{}{\par\vspace{1pt}\textcolor{subtle}{#1}}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.20\linewidth}\raggedleft
-    \textcolor{subtle}{#3}
+    \textcolor{subtle}{#4}
   \end{minipage}%
   \par
 }

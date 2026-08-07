@@ -1,49 +1,38 @@
 \documentclass[11pt,letterpaper]{article}
 \usepackage{style}
+\hypersetup{pdftitle={Radin Shayanfar - Resume}}
 
 \begin{document}
 \datefooter
 
-\header{}
+\header{LLM Coding Agents \textbullet\ Agent Evaluation \& Benchmarking}
 
 \section*{Summary}
-LLM engineer and researcher at Huawei Canada specializing in coding agents and their evaluation. Build new benchmarks, audit existing ones, and improve agent scaffolds. ACL 2026 and ICML 2026 publications on interpretable dialogue and multi-agent LLM safety; contributor to Harbor (Terminal-Bench's official harness) and NVIDIA's NeMo Guardrails.
+% LLM engineer and researcher at Huawei Canada. I build agentic SE benchmarks, audit existing ones for validity and reliability, and improve agent scaffolds. I also contribute to Harbor, the harness behind Terminal-Bench. Previously, during my M.A.Sc., I worked on controlling LLM behaviour, compiling dialogue schemas into interpretable guardrails (CoDial, ACL 2026) and red-teaming models through multi-agent debate (RedDebate, ICML 2026).
+AI/ML engineer and researcher at Huawei Canada working on LLM coding agents and how they are evaluated. I build, audit, and improve the benchmarks and harnesses, and work to make agents output trustworthy, with papers under review at AAAI 2027 and NeurIPS 2026. During my M.A.Sc. I worked on controlling LLM behaviour, compiling dialogue schemas into interpretable guardrails (CoDial, ACL 2026) and making models safer through multi-agent debate (RedDebate, ICML 2026). I also contribute to Harbor, the harness behind Terminal-Bench.
 
 \section*{Experience}
 
 \entry{Associate LLM Engineer}{\href{https://www.huawei.com/}{Huawei Canada}}{Kingston, ON, Canada}{Sep.\ 2025 -- Present}
 \begin{itemize}
-  \item Designed and built a \textbf{multi-language agentic coding benchmark} (SWE-Bench-style) whose problem statements come from \textbf{real user--agent interactions}.
-  \item First-authored a study (AAAI 2027, under review) profiling task demands across \textbf{five agentic SE benchmarks} and \textbf{six agents}; showed category labels are unreliable proxies for what a benchmark demands.
-  \item Improved a coding-agent scaffold, boosting performance by \textbf{>15\%} on SWE-Bench Verified.
-  \item Analyzed agent outputs on LiveCodeBench; surfaced model-side anomalies and harness/eval defects.
-  \item Lifted gold-patch resolution on FeatBench from \textbf{37.31\%}\,{\footnotesize$\pm$\,1.88} to \textbf{99.81\%}\,{\footnotesize$\pm$\,0.10} by diagnosing harness and environment defects in the original benchmark; released FeatBench-Verified v1.3 to the community.
+  \item Raised an in-house model's resolve rate on SWE-Bench by \textbf{15+ points} by auditing agent trajectories and modifying the OpenHands scaffold to mitigate the recurring failure modes they exposed.
+  \item Studied five agentic SE benchmarks and six agents (two model families, three sizes) behaviour and showed that benchmarks sharing a label such as ``bug fix'' demand very different engineering work.
+  \item Designed and built a \textbf{375-task agentic coding benchmark}, whose problem statements are drawn from real developer--agent interactions (paper in preparation).
+  \item Lifted gold-patch resolution on FeatBench from 37.31\%\,{\footnotesize$\pm$\,1.88} to \textbf{99.81\%}\,{\footnotesize$\pm$\,0.10} by diagnosing harness and evaluation defects in the original benchmark, and released the fixes as FeatBench-Verified v1.3.
+  \item Analyzed recurring agents failure modes in LiveCodeBench and reported them to the SFT data team.
 \end{itemize}
 
 \entry{Big Data Engineer}{\href{https://bale.ai/}{Bale Messenger}}{Tehran, Iran}{Mar.\ 2023 -- Aug.\ 2023}
 \begin{itemize}
-  \item Developed and maintained robust big data pipelines for continuous data ingestion and processing on the Bale financial-messaging platform, enhancing data reliability and real-time accessibility.
-  \item Implemented scalable solutions with Apache Spark, Hive, and Kafka, significantly improving data-warehousing efficiency and scalability.
+  \item Built big data ingestion pipelines using Spark, Hive, and Kafka for a financial-messaging platform serving $\sim$20M monthly active users.
 \end{itemize}
 
-\entry{Machine Learning Engineer \& Backend Developer}{Sharif Data Analytics Lab \& National Elites Foundation of Iran}{Tehran, Iran}{Dec.\ 2021 -- Sep.\ 2022}
+\entry{Machine Learning Engineer}{Sharif Data Analytics Lab}{Tehran, Iran}{Dec.\ 2021 -- Sep.\ 2022}
 \begin{itemize}
-  \item Trained a speaker-verification system (part of an Intelligent Voice Commands product) leveraging the state-of-the-art \href{https://arxiv.org/abs/2104.01466}{ECAPA-TDNN} model, achieving over 97\% accuracy on a custom 8,400-pair dataset.
+  \item Trained an \href{https://arxiv.org/abs/2104.01466}{ECAPA-TDNN} speaker-verification system to 97\% accuracy on a custom 8,400-pair dataset.
 \end{itemize}
 
-\section*{Education}
-
-\entry{M.A.Sc., Electrical and Computer Engineering}{Queen's University, Kingston, ON, Canada}{GPA: A+}{Sep.\ 2023 -- Sep.\ 2025}
-\begin{itemize}
-  \item Thesis: \textit{CoDial: Interpretable Task-Oriented Dialogue Systems Through Dialogue Flow Alignment} (Prof.\ X.\ Zhu). Published at ACL 2026.
-\end{itemize}
-
-\entry{B.Sc., Computer Engineering}{Amirkabir University of Technology, Tehran, Iran}{GPA: 19.45 / 20 --- Ranked 1st of 156}{Sep.\ 2018 -- Apr.\ 2023}
-\begin{itemize}
-  \item B.Sc.\ Project: \textit{Generating Handwritten Persian Characters with Generative Models} (Prof.\ A.\ Nickabadi).
-\end{itemize}
-
-\section*{Publications}
+\section*{Publications \& Writing}
 
 \pubentry
   {What Does an Agentic Software Engineering Benchmark Measure? Profiling Task Demands and Agent Behaviour Beyond What Category Labels Reveal}
@@ -52,10 +41,10 @@ LLM engineer and researcher at Huawei Canada specializing in coding agents and t
 
 \pubentry
   {Harbor Adapters and Harbor-Mix: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation}
-  {Lin Shi, Haowei Lin, \ldots, \textbf{Radin Shayanfar}, \ldots, Ludwig Schmidt, Alex G. Shaw.}
+  {Lin Shi, Haowei Lin, \ldots, \textbf{Radin Shayanfar}, \ldots, Ludwig Schmidt, Alex G.\ Shaw.}
   {NeurIPS 2026\\(under review)}
 
-\pubentry
+\pubentry[Controls LLM behaviour from a dialogue flow the user designs, turning it into guardrail code, making the model's decisions stay traceable and easy to correct.]
   {\href{https://aclanthology.org/2026.acl-long.1980/}{CoDial: Interpretable Task-Oriented Dialogue Systems Through Dialogue Flow Alignment}}
   {\textbf{Radin Shayanfar}, Chu Fei Luo, Rohan V.\ Bhambhoria, Samuel Dahan, Xiaodan Zhu.}
   {ACL 2026}
@@ -79,39 +68,29 @@ LLM engineer and researcher at Huawei Canada specializing in coding agents and t
 
 \entry{\href{https://github.com/harbor-framework/harbor}{Harbor Framework}}{Agent-evaluation harness and RL-environment framework from the creators of Terminal-Bench}{Contributor}{2026}
 \begin{itemize}
-  \item Authored the \textbf{FeatBench} Harbor adapter (\href{https://github.com/harbor-framework/harbor/pull/1218}{PR \#1218}) for a 156-task, 25-repo feature-level code-generation benchmark; ported parity fixes upstream to FeatBench and released FeatBench-Verified v1.3, preserving 99\%+ of original instances and tests.
-  \item Integrated ByteDance's \textbf{trae-agent} into Harbor (\href{https://github.com/harbor-framework/harbor/pull/1298}{PR \#1298}): full agent implementation, configuration handling, API-key sanitization, and unit tests.
-  \item Fixed a deveval oracle env-var bug (\href{https://github.com/harbor-framework/harbor/pull/1431}{PR \#1431}); reviewed the SWE-Gym pytest-xdist fix (\href{https://github.com/harbor-framework/harbor/pull/1438}{PR \#1438}).
+  \item Authored the FeatBench adapter for Harbor (\href{https://github.com/harbor-framework/harbor/pull/1218}{PR \#1218}), a 156-task, 25-repo feature-level code-generation benchmark, and ported the parity fixes upstream, preserving 99\%+ of original instances and tests.
+  \item Integrated ByteDance's trae-agent into Harbor (\href{https://github.com/harbor-framework/harbor/pull/1298}{PR \#1298}) with full agent implementation, configuration handling, and unit tests.
+  \item Fixed a deveval oracle env-var bug (\href{https://github.com/harbor-framework/harbor/pull/1431}{PR \#1431}); reviewing the SWE-Gym pytest-xdist fix (\href{https://github.com/harbor-framework/harbor/pull/1438}{PR \#1438}), flagged that the proposed universal flag would break environments lacking pytest-xdist.
 \end{itemize}
 
 \entry{\href{https://github.com/NVIDIA-NeMo/Guardrails}{NVIDIA NeMo Guardrails}}{Toolkit for programmable guardrails on LLM-based conversational systems}{Contributor}{2024}
 \begin{itemize}
-  \item Fixed the Colang~2 parser to correctly handle nested \texttt{if/else} statements (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/833}{PR \#833}).
-  \item Resolved multiline output rendering in few-shot prompts (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/765}{PR \#765}) and dynamic flow generation (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/748}{PR \#748}).
-  \item Added Colang commenting support (\texttt{Ctrl+/}) to the VSCode extension (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/749}{PR \#749}).
+  \item Fixed the Colang~2 parser for nested \texttt{if/else} (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/833}{PR \#833}), multiline output rendering in few-shot prompts (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/765}{PR \#765}), and dynamic flow generation (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/748}{PR \#748}); added Colang commenting to the VSCode extension (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/749}{PR \#749}). All four merged.
 \end{itemize}
 
-\section*{Selected Projects}
+\section*{Education}
 
-\entry{\href{https://github.com/radinshayanfar/transformer}{Transformer from Scratch}}{PyTorch, Transformer, Machine Translation, BPE Tokenization}{}{Summer 2025}
+\entry{M.A.Sc., Electrical and Computer Engineering}{Queen's University, Kingston, ON, Canada}{GPA: A+}{Sep.\ 2023 -- Sep.\ 2025}
 \begin{itemize}
-  \item Implemented the original Transformer in PyTorch (encoder-decoder, encoder-only, decoder-only) solely from the paper.
-  \item Built a complete WMT translation system: data loading, BPE tokenization, masking, training loop, and evaluation.
+  \item Thesis: \textit{CoDial} (Prof.\ X.\ Zhu), published at ACL 2026. TA for Machine Learning \& Deep Learning.
 \end{itemize}
 
-\entry{\href{https://github.com/radinshayanfar/speechbrain}{Speaker-Specific Voice Activity Detection}}{PyTorch, SpeechBrain, VAD, Speaker Verification}{}{Fall 2024}
-\begin{itemize}
-  \item Proposed a Speaker-Specific VAD framework integrating ECAPA-TDNN embeddings into a CRDNN-based VAD; extended SpeechBrain to support conditioning on target-speaker embeddings.
-  \item Achieved low Diarization Error Rate on the AMI dataset under real-time, multi-speaker conditions.
-\end{itemize}
+\entry{B.Sc., Computer Engineering}{Amirkabir University of Technology, Tehran, Iran}{GPA: 19.45/20, Ranked 1st of 156}{Sep.\ 2018 -- Apr.\ 2023}
 
 \section*{Skills}
 \begin{itemize}
-  \item \textbf{Programming:} Python, Go, Java, C, JavaScript.
-  \item \textbf{LLMs \& Agents:} LLM Coding Agents, Agent Evaluation \& Benchmarking, Benchmark Construction \& Auditing, Harbor Framework, LangChain, NeMo Guardrails, RAG, Pinecone.
-  \item \textbf{ML \& NLP:} PyTorch, HuggingFace Transformers, SpeechBrain, Keras.
-  \item \textbf{Infra \& Tools:} Docker, Kubernetes, Linux, Git, Apache Spark, Kafka.
-  \item \textbf{Languages:} Persian (native); English (proficient; TOEFL 109/120).
+  \item \textbf{LLMs \& Agents:} coding agents, agent scaffolds, agent evaluation and benchmarking, benchmark construction and auditing, trajectory analysis, sandboxed execution, Harbor, Terminal-Bench, SWE-Bench, OpenHands, NeMo Guardrails, RAG.
+  \item \textbf{ML \& Systems:} Python, PyTorch, HuggingFace Transformers, Go, Java, C, Docker, Kubernetes, Linux, Git, Spark, Kafka.
 \end{itemize}
 
 \end{document}
