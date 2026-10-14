@@ -8,7 +8,7 @@
 \header{LLM Coding Agents \textbullet\ Agent Evaluation \& Benchmarking}
 
 \section*{Summary}
-AI/ML engineer and researcher at Huawei Canada working on \textbf{agentic AI}, specifically \textbf{LLM coding agents} and their evaluation. I build, audit, and improve the \textbf{benchmarks} and \textbf{harnesses}, and work to make agents' output \textbf{trustworthy}, with papers under review at \textbf{AAAI} 2027 and \textbf{NeurIPS} 2026. During my M.A.Sc.\ I worked on controlling LLM behaviour, compiling dialogue schemas into \textbf{interpretable guardrails} (CoDial, \textbf{ACL} 2026), making models safer via \textbf{multi-agent debate} (RedDebate, \textbf{ICML} 2026), and applying \textbf{RAG} to misinformation detection (MisLC, \textbf{EMNLP} 2024). I contribute to NVIDIA NeMo Guardrails and the Harbor framework.
+AI/ML engineer and researcher at Huawei Canada working on \textbf{agentic AI}, specifically \textbf{LLM coding agents} and their evaluation. I build, audit, and improve the \textbf{benchmarks} and \textbf{harnesses}, and work to make agents' output \textbf{trustworthy}, with papers accepted at \textbf{NeurIPS} 2026. During my M.A.Sc.\ I worked on controlling LLM behaviour, compiling dialogue schemas into \textbf{interpretable guardrails} (CoDial, \textbf{ACL} 2026), making models safer via \textbf{multi-agent debate} (RedDebate, \textbf{ICML} 2026), and applying \textbf{RAG} to misinformation detection (MisLC, \textbf{EMNLP} 2024). I contribute to NVIDIA NeMo Guardrails and the Harbor framework.
 
 \section*{Experience}
 
@@ -18,7 +18,7 @@ AI/ML engineer and researcher at Huawei Canada working on \textbf{agentic AI}, s
   \item Raised an in-house model's resolve rate on SWE-Bench Verified by \textbf{15+ points} by auditing agent trajectories and modifying the OpenHands scaffold to mitigate the recurring failure modes they exposed, including a hardened string-replacement tool worth $\sim$10 points of that gain, plus evaluation-infrastructure defects.
   \item Designed and built a \textbf{375-task} multi-language agentic coding benchmark in the SWE-Bench family, spanning bug fixes, feature implementation, documentation, refactoring, and testing. Problem statements are drawn from real developer--agent interactions rather than GitHub issue text, closing the gap between how benchmarks phrase tasks and how developers actually ask for them (paper in preparation).
   \item Shipped each task at three levels of problem detail, varying how much the developer reveals to the agent, so the benchmark measures sensitivity to problem specification rather than a single fixed phrasing.
-  \item Profiled what five agentic SE benchmarks demand of an agent by running six coding agents across two model families at three scales each; introduced the Spread--Novelty--Centrality profile, showed that category labels such as ``bug fix'' are unreliable proxies for the engineering work a task requires, and surfaced behavioural patterns specific to each family and scale (first-author, AAAI 2027, under review).
+  \item Profiled what five agentic SE benchmarks demand of an agent by running six coding agents across two model families at three scales each; introduced the Spread--Novelty--Centrality profile, showed that category labels such as ``bug fix'' are unreliable proxies for the engineering work a task requires, and surfaced behavioural patterns specific to each family and scale (first-author, preprint).
   \item Isolated recurring model-side failure modes in LiveCodeBench (LCB) agent trajectories and reported them to the SFT data team to inform the next training iteration; separately surfaced harness and evaluation defects that were masking true capability signal.
 \end{itemize}
 
@@ -72,12 +72,12 @@ AI/ML engineer and researcher at Huawei Canada working on \textbf{agentic AI}, s
 \pubentry[Introduces the Spread--Novelty--Centrality profile to characterize what repository-level coding tasks demand, applied to five benchmarks and six agents.]
   {\href{https://arxiv.org/abs/2609.01271}{What Does an Agentic Software Engineering Benchmark Measure? Profiling Task Demands and Agent Behaviour Beyond What Category Labels Reveal}}
   {\textbf{Radin Shayanfar}, Keheliya Gallaba, Ahmed E.\ Hassan.}
-  {AAAI 2027\\(under review)}
+  {Preprint}
 
 \pubentry
   {\href{https://arxiv.org/abs/2609.04298}{Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation}}
   {Lin Shi, Haowei Lin, \ldots, \textbf{Radin Shayanfar}, \ldots, Ludwig Schmidt, Alex G.\ Shaw.}
-  {NeurIPS 2026\\(under review)}
+  {NeurIPS 2026\\(E\&D Track)}
 
 \pubentry[Controls LLM behaviour from a dialogue flow the developer writes, turning it into guardrail code (NVIDIA Colang) so the model's decisions stay traceable and easy to correct. SOTA on standard TOD benchmarks.]
   {\href{https://aclanthology.org/2026.acl-long.1980/}{CoDial: Interpretable Task-Oriented Dialogue Systems Through Dialogue Flow Alignment}}
