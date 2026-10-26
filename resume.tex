@@ -2,6 +2,12 @@
 \usepackage{style}
 \hypersetup{pdftitle={Radin Shayanfar - Resume}}
 
+% Resume-only spacing: keep all open-source contributions on page one.
+\geometry{top=0.6in,bottom=0.6in}
+\setlength{\parskip}{0pt}
+\titlespacing*{\section}{0pt}{8pt}{3pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.5pt,topsep=1pt,parsep=0pt,label=\textbullet}
+
 \begin{document}
 \datefooter
 
@@ -15,7 +21,7 @@ AI/ML engineer and researcher at Huawei Canada working on \textbf{agentic AI}, s
 
 \entry{Associate LLM Engineer}{\href{https://www.huawei.com/}{Huawei Canada}}{Kingston, ON, Canada}{Sep.\ 2025 -- Present}
 \begin{itemize}
-  \item Raised an in-house model's resolve rate on SWE-Bench by \textbf{15+ points} by auditing agent trajectories and modifying the OpenHands scaffold to mitigate the recurring failure modes they exposed.
+  \item Raised an in-house model's resolve rate on SWE-Bench by \textbf{approximately 15\%} by auditing agent trajectories and modifying the OpenHands scaffold to mitigate the recurring failure modes they exposed.
   \item Studied five agentic SE benchmarks and how six agents (two model families, three sizes) behave on them, showing that benchmarks sharing a label such as ``bug fix'' demand very different engineering work.
   \item Designed and built a \textbf{375-task agentic coding benchmark}, whose problem statements are drawn from real developer--agent interactions (paper in preparation).
   \item Lifted gold-patch resolution on FeatBench from 37.31\%\,{\footnotesize$\pm$\,1.88} to \textbf{99.81\%}\,{\footnotesize$\pm$\,0.10} by diagnosing harness and evaluation defects in the original benchmark, and released the fixes as FeatBench-Verified v1.3.
@@ -29,8 +35,24 @@ AI/ML engineer and researcher at Huawei Canada working on \textbf{agentic AI}, s
 
 \entry{Machine Learning Engineer}{Sharif Data Analytics Lab}{Tehran, Iran}{Dec.\ 2021 -- Sep.\ 2022}
 \begin{itemize}
-  \item Trained an \href{https://arxiv.org/abs/2104.01466}{ECAPA-TDNN} speaker-verification system to 97\% accuracy on a custom 8,400-pair dataset.
+  \item Trained an \href{https://arxiv.org/abs/2104.01466}{ECAPA-TDNN} speaker-verification system using SpeechBrain to 97\% accuracy on a custom 8,400-pair dataset.
 \end{itemize}
+
+\section*{Open-Source Contributions}
+
+\entry{\href{https://github.com/harbor-framework/harbor}{Harbor Framework}}{Agent-evaluation harness and RL-environment framework from the creators of Terminal-Bench}{Contributor}{2026}
+\begin{itemize}
+  \item Authored the FeatBench adapter for Harbor (\href{https://github.com/harbor-framework/harbor/pull/1218}{PR \#1218}), a 156-task, 25-repo feature-level code-generation benchmark, and ported the parity fixes upstream, preserving 99\%+ of original instances and tests.
+  \item Integrated ByteDance's trae-agent into Harbor (\href{https://github.com/harbor-framework/harbor/pull/1298}{PR \#1298}) with full agent implementation, configuration handling, and unit tests.
+  \item Fixed a deveval oracle env-var bug (\href{https://github.com/harbor-framework/harbor/pull/1431}{PR \#1431}); reviewing the SWE-Gym pytest-xdist fix (\href{https://github.com/harbor-framework/harbor/pull/1438}{PR \#1438}), flagged that the proposed universal flag would break environments lacking pytest-xdist.
+\end{itemize}
+
+\entry{\href{https://github.com/NVIDIA-NeMo/Guardrails}{NVIDIA NeMo Guardrails}}{Toolkit for programmable guardrails on LLM-based conversational systems}{Contributor}{2024}
+\begin{itemize}
+  \item Fixed the Colang~2 parser for nested \texttt{if/else} (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/833}{PR \#833}), multiline output rendering in few-shot prompts (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/765}{PR \#765}), and dynamic flow generation (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/748}{PR \#748}); added Colang commenting to the VSCode extension (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/749}{PR \#749}). All four merged.
+\end{itemize}
+
+\newpage
 
 \section*{Publications \& Writing}
 
@@ -63,20 +85,6 @@ AI/ML engineer and researcher at Huawei Canada working on \textbf{agentic AI}, s
   {\href{https://aclanthology.org/2024.findings-emnlp.924/}{Misinformation with Legal Consequences (MisLC): A New Task Towards Harnessing Societal Harm of Misinformation}}
   {Chu Fei Luo, \textbf{Radin Shayanfar}, Rohan V.\ Bhambhoria, Samuel Dahan, Xiaodan Zhu.}
   {EMNLP 2024\\(Findings)}
-
-\section*{Open-Source Contributions}
-
-\entry{\href{https://github.com/harbor-framework/harbor}{Harbor Framework}}{Agent-evaluation harness and RL-environment framework from the creators of Terminal-Bench}{Contributor}{2026}
-\begin{itemize}
-  \item Authored the FeatBench adapter for Harbor (\href{https://github.com/harbor-framework/harbor/pull/1218}{PR \#1218}), a 156-task, 25-repo feature-level code-generation benchmark, and ported the parity fixes upstream, preserving 99\%+ of original instances and tests.
-  \item Integrated ByteDance's trae-agent into Harbor (\href{https://github.com/harbor-framework/harbor/pull/1298}{PR \#1298}) with full agent implementation, configuration handling, and unit tests.
-  \item Fixed a deveval oracle env-var bug (\href{https://github.com/harbor-framework/harbor/pull/1431}{PR \#1431}); reviewing the SWE-Gym pytest-xdist fix (\href{https://github.com/harbor-framework/harbor/pull/1438}{PR \#1438}), flagged that the proposed universal flag would break environments lacking pytest-xdist.
-\end{itemize}
-
-\entry{\href{https://github.com/NVIDIA-NeMo/Guardrails}{NVIDIA NeMo Guardrails}}{Toolkit for programmable guardrails on LLM-based conversational systems}{Contributor}{2024}
-\begin{itemize}
-  \item Fixed the Colang~2 parser for nested \texttt{if/else} (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/833}{PR \#833}), multiline output rendering in few-shot prompts (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/765}{PR \#765}), and dynamic flow generation (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/748}{PR \#748}); added Colang commenting to the VSCode extension (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/749}{PR \#749}). All four merged.
-\end{itemize}
 
 \section*{Education}
 
