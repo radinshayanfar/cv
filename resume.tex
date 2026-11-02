@@ -2,7 +2,6 @@
 \usepackage{style}
 \hypersetup{pdftitle={Radin Shayanfar - Resume}}
 
-% Resume-only spacing: keep all open-source contributions on page one.
 \geometry{top=0.6in,bottom=0.6in}
 \setlength{\parskip}{0pt}
 \titlespacing*{\section}{0pt}{8pt}{3pt}
@@ -15,7 +14,7 @@
 
 \section*{Summary}
 % LLM engineer and researcher at Huawei Canada. I build agentic SE benchmarks, audit existing ones for validity and reliability, and improve agent scaffolds. I also contribute to Harbor, the harness behind Terminal-Bench. Previously, during my M.A.Sc., I worked on controlling LLM behaviour, compiling dialogue schemas into interpretable guardrails (CoDial, ACL 2026) and red-teaming models through multi-agent debate (RedDebate, ICML 2026).
-LLM/GenAI and machine learning engineer with 2+ years of experience building coding agents, evaluation benchmarks, speech models, and production data systems. Currently an LLM Research Engineer at Huawei Canada, focused on agent evaluation, benchmark design, and scaffold improvement. Previously built speaker-verification systems and Spark/Kafka data pipelines; research contributions span interpretable dialogue systems, LLM safety, and misinformation detection, with publications at ACL, ICML, NeurIPS, and EMNLP.
+LLM/GenAI and ML engineer with 2+ years of experience building coding agents, evaluation benchmarks, speech models, and production data systems. Currently an LLM Research Engineer at Huawei Canada, focused on agent evaluation, benchmark design, and scaffold improvement. Previously built speaker-verification systems and Spark/Kafka data pipelines; research contributions span interpretable dialogue systems, LLM safety, and misinformation detection, with publications at ACL, ICML, NeurIPS, and EMNLP.
 
 \section*{Experience}
 
@@ -31,7 +30,7 @@ LLM/GenAI and machine learning engineer with 2+ years of experience building cod
 \entry{Big Data Engineer}{\href{https://bale.ai/}{Bale Messenger}}{Tehran, Iran}{Mar.\ 2023 -- Aug.\ 2023}
 \begin{itemize}
   \item Built and enhanced Spark, Hive, and Kafka pipelines for a financial-messaging platform serving $\sim$20M monthly users, adding self-service capabilities that reduced teams’ reliance on the data engineering team.
-  \item Improved warehouse reliability by resolving recurring data-type inconsistencies, adding validation safeguards, and troubleshooting production incidents, including diagnosing and mitigating severe Kafka lag.
+  \item Improved warehouse reliability by resolving data-type inconsistencies, adding validation safeguards, and troubleshooting production incidents, including diagnosing and mitigating severe Kafka lag.
 \end{itemize}
 
 \entry{Machine Learning Engineer}{Sharif Data Analytics Lab}{Tehran, Iran}{Dec.\ 2021 -- Sep.\ 2022}
@@ -40,6 +39,14 @@ LLM/GenAI and machine learning engineer with 2+ years of experience building cod
   \item Designed and collected real-world evaluation data, improved reliability against out-of-distribution audio through targeted positive-pair augmentation, and tuned the threshold to balance false accepts and rejects.
   \item Integrated the work of five research subteams into a unified voice-command recognition and speaker-authentication product through Flask and Laravel microservices APIs.
 \end{itemize}
+
+\section*{Skills}
+\begin{itemize}
+  \item \textbf{Generative AI \& Agents:} large language models, agentic AI, coding agents, agent scaffolds, agent evaluation and benchmarking, benchmark construction, trajectory analysis, sandboxed execution, MCP, Harbor, vLLM, LangChain, LiteLLM, NeMo Guardrails, RAG, Pyserini.
+  \item \textbf{ML, Data \& Systems:} Python, PyTorch, HuggingFace Transformers, statistical analysis, Go, Java, C, Docker, Kubernetes, Linux, Git, Spark, Hadoop, Hive, Kafka.
+\end{itemize}
+
+\newpage
 
 \section*{Open-Source Contributions}
 
@@ -55,8 +62,6 @@ LLM/GenAI and machine learning engineer with 2+ years of experience building cod
   \item Fixed the Colang~2 parser for nested \texttt{if/else} (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/833}{PR \#833}), multiline output rendering in few-shot prompts (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/765}{PR \#765}), and dynamic flow generation (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/748}{PR \#748}); added Colang commenting to the VSCode extension (\href{https://github.com/NVIDIA-NeMo/Guardrails/pull/749}{PR \#749}). All four merged.
 \end{itemize}
 
-\newpage
-
 \section*{Publications \& Writing}
 
 \pubentry
@@ -69,7 +74,7 @@ LLM/GenAI and machine learning engineer with 2+ years of experience building cod
   {Lin Shi, Haowei Lin, \ldots, \textbf{Radin Shayanfar}, \ldots, Ludwig Schmidt, Alex G.\ Shaw.}
   {NeurIPS 2026\\(E\&D Track)}
 
-\pubentry[Controls LLM behaviour from a dialogue flow the user designs, turning it into guardrail code, making the model's decisions stay traceable and easy to correct.]
+\pubentry%[Controls LLM behaviour from a dialogue flow the user designs, turning it into guardrail code, making the model's decisions stay traceable and easy to correct.]
   {\href{https://aclanthology.org/2026.acl-long.1980/}{CoDial: Interpretable Task-Oriented Dialogue Systems Through Dialogue Flow Alignment}}
   {\textbf{Radin Shayanfar}, Chu Fei Luo, Rohan V.\ Bhambhoria, Samuel Dahan, Xiaodan Zhu.}
   {ACL 2026}
@@ -97,11 +102,5 @@ LLM/GenAI and machine learning engineer with 2+ years of experience building cod
 \end{itemize}
 
 \entry{B.Sc., Computer Engineering}{Amirkabir University of Technology, Tehran, Iran}{GPA: 19.45/20, Ranked 1st of 156}{Sep.\ 2018 -- Apr.\ 2023}
-
-\section*{Skills}
-\begin{itemize}
-  \item \textbf{Generative AI \& Agents:} large language models, agentic AI, coding agents, agent scaffolds, agent evaluation and benchmarking, benchmark construction, trajectory analysis, sandboxed execution, tool use, MCP, SWE-Bench, OpenHands, Harbor, vLLM, LangChain, LiteLLM, NeMo Guardrails, RAG, Pyserini, BM25.
-  \item \textbf{ML, Data \& Systems:} Python, PyTorch, HuggingFace Transformers, data science, statistical analysis, Go, Java, C, Docker, Kubernetes, Linux, Git, Spark, Hadoop, Hive, Kafka.
-\end{itemize}
 
 \end{document}
